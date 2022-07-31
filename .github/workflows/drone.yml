@@ -1,15 +1,6 @@
 name: Test Orange Building recovery
 
 on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
   workflow_dispatch:
 
 jobs:
@@ -18,7 +9,9 @@ jobs:
        
          
 steps:
+
 - name: Start syncing && Compiling
+  uses: actions/checkout@master
   image: brock5555/recovery
   commands:
   - bash build.sh
