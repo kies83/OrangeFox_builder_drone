@@ -1,13 +1,25 @@
----
-kind: pipeline
-type: docker
-name: linux-amd64
+name: Test Orange Building recovery
 
-platform:
-  arch: amd64
-  os: linux
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  workflow_dispatch:
 
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+       
+         
 steps:
+- name: Checkout
+         uses: actions/checkout@master
 - name: Start syncing && Compiling
   image: brock5555/recovery
   commands:
