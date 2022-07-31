@@ -1,8 +1,8 @@
 #!/bin/bash
 MANIFEST="https://gitlab.com/OrangeFox/sync.git"
-OEM="samsung"
-DEVICE="a31"
-DT_LINK="https://github.com/shanuoon/device_samsung_a31.git"
+OEM="infinix"
+DEVICE="X655C"
+DT_LINK="https://github.com/kies83/recovery_device_infinix_x655c_h6211abkg-q-op.git"
 DT_PATH=device/$OEM/$DEVICE
 EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
 
